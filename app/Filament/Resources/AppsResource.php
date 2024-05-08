@@ -11,6 +11,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -48,7 +49,7 @@ class AppsResource extends Resource
                         TextInput::make('password')
                             ->password()
                             ->required(),
-                        RichEditor::make('description'),
+                        Textarea::make('description'),
                         FileUpload::make('photos'),
                     ])
                     ->columns(1)
