@@ -63,6 +63,7 @@ class AppsResource extends Resource
                 TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('username')->sortable()->searchable(),
                 TextColumn::make('email')->sortable()->searchable(),
+                TextColumn::make('password')->sortable()->searchable(),
                 ImageColumn::make('photos')
             ])
             ->filters([
@@ -70,6 +71,7 @@ class AppsResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
